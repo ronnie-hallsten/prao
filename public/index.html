@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="prao">
+    <head>
+        <title>Prao Angular App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <script src="js/angular.js"></script>
+        <script src="js/ui-bootstrap-tpls-2.5.0.min.js"></script>
+        <script src="js/prao.js"></script>
+    </head>
+    <body ng-controller="MainCtrl">
+        <div ng-repeat="(index, detail) in details">
+            <span class="btn btn-success">{{detail.name}}</span>  <span class="btn btn-danger" ng-click="remove(index)">x</span>
+        </div>
+        
+        <form name="myForm">
+            <input ng-model="test" type="text" name="fname">
+        </form>
+        
+        <span ng-click="add(test); test='';">Tryck här</span>
+    </body>
+</html>
