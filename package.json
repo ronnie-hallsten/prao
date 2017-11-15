@@ -4,5 +4,6 @@
     "keywords": ["util", "functional", "server", "client", "browser"],
     "author": "ronnie",
     "contributors": [],
-    "dependencies": {}
+    "dependencies": {},
+    "main" : "main.js"
 }

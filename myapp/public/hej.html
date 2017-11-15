@@ -1,0 +1,65 @@
+
+<html>
+    <head>
+        <script src="http://koda.nu/simple.js"></script>
+        <title>Server2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+        <body>
+        <div>Häkkererer:)</div>
+    </body>
+</html>
+        <script type type = "text/javascript"> 
+            
+     bollar = [];  
+  var radie = 20;  
+  var antal = 5;  
+  var nasta = 0; 
+    
+  function start()  
+  {  
+    for (var i = 0; i < antal; i++)  
+    {  
+      bollar.push(new Boll(i));   
+    }  
+  }  
+    
+  function update()  
+  {  
+    clearScreen();  
+    for (var i = nasta; i < antal; i++)  
+    {  
+      if (distance(mouse, bollar[i])<radie) 
+      { 
+        if(bollar[i].nummer == nasta) 
+           { 
+           nasta++; 
+           }else { 
+           stopUpdate(); 
+          } 
+      } 
+      bollar[i].update();  
+    }  
+  }  
+  function Boll(n)  
+  {  
+    this.x = random(totalWidth);  
+    this.y = random(totalHeight);  
+    this.nummer = n;  
+    this.stegX = random(8)+1; 
+    this.stegY = 8-this.stegX; 
+      
+    this.update = function()  
+    {  
+      if(this.y< 0) {this.stegY = abs(this.stegY);} 
+      if(this.x< 0) {this.stegX = abs(this.stegX);} 
+      if(this.y> totalHeight){this.stegY = -abs(this.stegY);} 
+      if(this.x> totalWidth) {this.stegX = -abs(this.stegX);} 
+       this.x += this.stegX;  
+       this.y += this.stegY;  
+     circle(this.x, this.y, radie, "lightblue");  
+     text(this.x-8, this.y+8, 24, this.nummer+1, "black");  
+    }  
+  }  
+</script> 
