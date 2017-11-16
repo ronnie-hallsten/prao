@@ -1,4 +1,4 @@
-var app = angular.module('prao', []);
+var app = angular.module('prao', ['ui.bootstrap']);
 
 app.controller('MainCtrl', function ($scope) {
 

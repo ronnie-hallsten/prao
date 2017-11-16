@@ -23,3 +23,9 @@ spara ändringar - `git commit -m "text"`
 
 skika - `git push -u origin master`
 
+
+
+https://docs.angularjs.org/api/ng/directive/input
+https://angular-ui.github.io/bootstrap/
+https://embed.plnkr.co/BkHLPk
+
